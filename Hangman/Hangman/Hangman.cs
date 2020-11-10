@@ -20,11 +20,7 @@ namespace Hangman
         public string Guess(char letter)
         {
             var s = string.Empty;
-
             _letters.Add(letter);
-
-            var pos = _secret.IndexOf(letter);
-
             foreach (var c in _secret)
             {
                 if( _letters.Contains(char.ToUpper(c)) )
@@ -35,9 +31,7 @@ namespace Hangman
                 {
                     s += '-';
                 }
-
             }
-
             return s;
         }
     }
